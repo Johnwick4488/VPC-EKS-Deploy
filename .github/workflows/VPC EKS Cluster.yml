@@ -13,15 +13,23 @@ jobs:
     permissions:
       contents: read
       id-token: write
+      
     steps:
       - name: Assume role
         uses: magnetikonline/action-aws-iam-assume-role@v1
         with:
           web-identity-role-arn: arn:aws:iam::102057119514:role/githubactions-test
+          assume-role-arn: arn:aws:iam::102057119514:role/oidc-test-01
           aws-region: us-east-1
           # optional inputs
           # assume-role-duration-seconds: 6000
           # assume-role-session-name: GitHubActions
+          
+     # - name: configure aws credentials
+     #   uses: aws-actions/configure-aws-credentials@v1
+     #   with:
+     #    role-to-assume: arn:aws:iam::102057119514:role/oidc-test-01
+     #    role-session-name: samplerolesession
 
       # IAM role assumed via AWS_ACCESS_KEY_ID/AWS_SECRET_ACCESS_KEY/AWS_SESSION_TOKEN
       - name: whoami
