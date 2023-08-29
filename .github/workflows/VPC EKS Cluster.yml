@@ -19,7 +19,7 @@ jobs:
         uses: magnetikonline/action-aws-iam-assume-role@v1
         with:
           web-identity-role-arn: arn:aws:iam::102057119514:role/githubactions-test
-          assume-role-arn: arn:aws:iam::102057119514:role/oidc-test-01
+          assume-role-arn: arn:aws:iam::102057119514:oidc-provider/token.actions.githubusercontent.com
           aws-region: us-east-1
           # optional inputs
           # assume-role-duration-seconds: 6000
