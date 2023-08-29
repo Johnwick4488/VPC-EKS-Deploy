@@ -33,7 +33,7 @@ jobs:
      #   uses: aws-actions/configure-aws-credentials@v1
      #   with:
      #    role-to-assume: arn:aws:iam::102057119514:role/oidc-test-01
-     #    role-session-name: samplerolesession
+        # role-session-name: samplerolesession  
 
       - name: Terraform Init
         run: terraform init
