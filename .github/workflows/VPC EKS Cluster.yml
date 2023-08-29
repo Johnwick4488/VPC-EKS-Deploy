@@ -18,7 +18,7 @@ jobs:
         uses: magnetikonline/action-aws-iam-assume-role@v1
         with:
           web-identity-role-arn: arn:aws:iam::102057119514:role/githubactions-test
-           aws-region: us-east-1
+          aws-region: us-east-1
           # optional inputs
           # assume-role-duration-seconds: 6000
           # assume-role-session-name: GitHubActions
