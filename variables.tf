@@ -32,6 +32,13 @@ variable "networkacls_id" {
   default = "acl-08a4c0e4e45b406bd"
 }
 
+variable "natgateways_id" {
+  type = string
+  description = "Network ACLs"
+  default = "nat-0c4906b3683ea9522"
+}
+
+
 variable "eksproject" {
   description = "Name of the project deployment."
   type = string
