@@ -12,7 +12,7 @@ variable "vpc_cidr" {
 
 variable "public_subnet_ids" {
   type = list
-  default = ["subnet-021de939c96bb9790", "subnet-0fa8d2f64aa489736", "subnet-0596b5e7a51a6b4b9", "subnet-0477a722681ae6d73"]
+  default = ["subnet-021de939c96bb9790", "subnet-0fa8d2f64aa489736"]
 }
 
 variable "private_subnet_ids" {
