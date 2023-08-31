@@ -10,9 +10,14 @@ variable "vpc_cidr" {
   default     = "172.0.0.0/16"
 }
 
-variable "subnet_ids" {
+variable "public_subnet_ids" {
   type = list
   default = ["subnet-021de939c96bb9790", "subnet-0fa8d2f64aa489736", "subnet-0596b5e7a51a6b4b9", "subnet-0477a722681ae6d73"]
+}
+
+variable "private_subnet_ids" {
+  type = list
+  default = ["subnet-0596b5e7a51a6b4b9", "subnet-0477a722681ae6d73"]
 }
 
 variable "routetable" {
@@ -31,13 +36,6 @@ variable "networkacls_id" {
   description = "Network ACLs"
   default = "acl-08a4c0e4e45b406bd"
 }
-
-variable "natgateways_id" {
-  type = string
-  description = "Network ACLs"
-  default = "nat-0c4906b3683ea9522"
-}
-
 
 variable "eksproject" {
   description = "Name of the project deployment."

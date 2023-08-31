@@ -81,7 +81,7 @@ resource "aws_iam_role" "workernodes" {
   cluster_name  = aws_eks_cluster.Johnwick-eks.name
   node_group_name = var.eksproject
   node_role_arn  = aws_iam_role.workernodes.arn
-  subnet_ids   = var.subnet_ids
+  subnet_ids   = var.public_subnet_ids
   instance_types = ["t2.micro"]
  
   scaling_config {
