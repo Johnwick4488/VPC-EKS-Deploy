@@ -37,6 +37,10 @@ resource "aws_eks_cluster" "Johnwick-eks" {
   subnet_ids = var.public_subnet_ids
  }
 
+ tags = {
+    
+  }
+
  depends_on = [
   aws_iam_role.eks-iam-role,
  ]
@@ -82,18 +86,13 @@ resource "aws_iam_role" "workernodes" {
   node_group_name = var.eksproject
   node_role_arn  = aws_iam_role.workernodes.arn
   subnet_ids   = var.public_subnet_ids
-  instance_types = ["t2.micro"]
+  instance_types = ["t2.medium"]
  
   scaling_config {
    desired_size = 2
    max_size   = 4
    min_size   = 2
   }
-
-   tags = merge(
-    var.tags
-  )
-
  
   depends_on = [
    aws_iam_role_policy_attachment.AmazonEKSWorkerNodePolicy,

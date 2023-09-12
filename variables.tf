@@ -43,6 +43,24 @@ variable "eksproject" {
   default = "Johnwick"
 }
 
+variable "aws_security_group" {
+  description = "Security group rule"
+  type = string
+  default = "sg-05da5f562487922c3"
+}
+
+variable "aws_s3_bucket" {
+  description = "s3 bucket name"
+  type = string
+  default = "my-personal-bucket000044"
+}
+
+variable "cluster_name" {
+  description = "cluster name"
+  type = string
+  default = "Johnwick-cluster"
+}
+
 variable "tags" {
   description = "A map of tags to add to all resources"
   type        = map(string)
