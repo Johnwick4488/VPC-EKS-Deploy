@@ -40,7 +40,7 @@ variable "networkacls_id" {
 variable "eksproject" {
   description = "Name of the project deployment."
   type = string
-  default = "Johnwick"
+  default = "Johnwick-01-cluster"
 }
 
 variable "aws_security_group" {
@@ -58,7 +58,7 @@ variable "aws_s3_bucket" {
 variable "cluster_name" {
   description = "cluster name"
   type = string
-  default = "Johnwick-cluster"
+  default = "Johnwick-cluster-01"
 }
 
 variable "tags" {
