@@ -1,7 +1,7 @@
 variable "vpc_id" {
   type = string
   description = "Vpc ID"
-  default = "vpc-07c8d3469b22809e3"
+  default = "vpc-03a9bc480d13fb28c"
 }
 
 variable "vpc_cidr" {
@@ -12,53 +12,53 @@ variable "vpc_cidr" {
 
 variable "public_subnet_ids" {
   type = list
-  default = ["subnet-021de939c96bb9790", "subnet-0fa8d2f64aa489736"]
+  default = ["subnet-0ed3a432129e37777", "subnet-09089b994b817cdff"]
 }
 
 variable "private_subnet_ids" {
   type = list
-  default = ["subnet-0596b5e7a51a6b4b9", "subnet-0477a722681ae6d73"]
+  default = ["subnet-04697e699c9cd7afd", "subnet-0276498f851cf3a6a"]
 }
 
 variable "routetable" {
   type = list
-  default = ["rtb-0f37f0bb1caa5b9ec", "rtb-0354e2224794f00f3"]
+  default = ["rtb-0e8b344814015d957", "rtb-0f4113f2447f21566"]
 }
 
 variable "internetgateway_id" {
   type = string
   description = "Internet gateway"
-  default = "igw-0b8ced56f5b11047f"
+  default = "igw-064d67b6e96cdf612"
 }
 
 variable "networkacls_id" {
   type = string
   description = "Network ACLs"
-  default = "acl-08a4c0e4e45b406bd"
+  default = "acl-06f48a8352a9d35f8"
 }
 
 variable "eksproject" {
   description = "Name of the project deployment."
   type = string
-  default = "Johnwick-01-cluster"
+  default = "Johnwick"
 }
 
 variable "aws_security_group" {
   description = "Security group rule"
   type = string
-  default = "sg-05da5f562487922c3"
+  default = "sg-0e52de3b486ae0b61"
 }
 
 variable "aws_s3_bucket" {
   description = "s3 bucket name"
   type = string
-  default = "my-personal-bucket000044"
+  default = "my-personal-bucket0000044"
 }
 
 variable "cluster_name" {
   description = "cluster name"
   type = string
-  default = "Johnwick-cluster-01"
+  default = "Johnwick"
 }
 
 variable "tags" {
